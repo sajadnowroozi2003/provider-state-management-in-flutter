@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider_in_flutter/views/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,28 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(), // Default Light Theme
-      home: const ChangeTheme(),
-    );
-  }
-}
-
-class ChangeTheme extends StatefulWidget {
-  const ChangeTheme({super.key});
-
-  @override
-  State<ChangeTheme> createState() => _ChangeThemeState();
-}
-
-class _ChangeThemeState extends State<ChangeTheme> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Change Theme'),
-      ),
-      body: const Center(
-        child: Text('Hello', style: TextStyle(fontSize: 20)),
-      ),
+      home: HomePage(),
     );
   }
 }
